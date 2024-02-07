@@ -1,0 +1,154 @@
+*, ::after, ::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Roboto";
+  font-weight: 400;
+  color: #777777;
+  font-size: 1.6rem;
+  letter-spacing: 0.2rem;
+  padding: 5rem;
+  background-color: white;
+}
+
+.container {
+  background-color: #F7F7F7;
+  height: 45rem;
+  width: 100%;
+}
+
+.header {
+  position: relative;
+  height: 95vh;
+  background: linear-gradient(90deg, rgba(186, 133, 84, 0.9019607843) 0.03%, rgba(1, 1, 1, 0.7) 99.94%), url("/img/header-background.jpg") center/cover no-repeat;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+}
+.header__logo {
+  position: absolute;
+  left: 5rem;
+  top: 5rem;
+  height: 7rem;
+  width: 5.6rem;
+}
+.header__box {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
+}
+
+.title-first {
+  color: white;
+  text-transform: uppercase;
+}
+.title-first__first {
+  display: block;
+  font-weight: 800;
+  font-size: 5rem;
+  line-height: 6rem;
+  letter-spacing: 1rem;
+  margin-bottom: 1rem;
+  animation-name: leftToRight;
+  animation-duration: 1.5s;
+  animation-delay: 0.5s;
+  animation-timing-function: ease;
+}
+.title-first__second {
+  display: block;
+  font-weight: 400;
+  font-size: 4rem;
+  line-height: 4.8rem;
+  letter-spacing: 0.5rem;
+  animation-name: rightToLeft;
+  animation-duration: 1.5s;
+  animation-delay: 0.5s;
+  animation-timing-function: ease;
+  margin-bottom: 6.5rem;
+}
+
+.btn:link, .btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: rgba(26, 24, 24, 0.6588235294);
+  padding: 1.5rem 4rem;
+  font-size: 2rem;
+  background: white;
+  font-weight: bolder;
+  border-radius: 5rem;
+  display: inline-block;
+  transition: all 0.3s;
+  position: relative;
+}
+.btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+}
+.btn:hover::after {
+  opacity: 0;
+  transform: scale(1.15, 1.5);
+}
+.btn:active {
+  transform: translateY(5px);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+}
+.btn::after {
+  content: "";
+  background: white;
+  width: 100%;
+  height: 100%;
+  border-radius: 50px;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.3s;
+}
+.btn_anim {
+  animation: smoothAppearence 3s 0.5s;
+}
+
+@keyframes leftToRight {
+  0% {
+    opacity: 0;
+    transform: translate(-30rem);
+  }
+  70% {
+    transform: translate(3.5rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0px);
+  }
+}
+@keyframes rightToLeft {
+  0% {
+    opacity: 0;
+    transform: translate(30rem);
+  }
+  70% {
+    transform: translate(-3.5rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0px);
+  }
+}
+@keyframes smoothAppearence {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}/*# sourceMappingURL=style.css.map */
